@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# C++ / CMake build output
+/build/
+/out/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.exe
+*.obj
+*.o
