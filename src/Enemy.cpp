@@ -22,9 +22,26 @@ void Enemy::update(float deltaSeconds)
         m_position.y = std::clamp(m_position.y, -m_worldLimit, m_worldLimit);
         m_velocity.y = -m_velocity.y;
     }
+
+    tickPulse(deltaSeconds);
 }
 
 sf::Vector2f Enemy::position() const
 {
     return m_position;
+}
+
+void Enemy::triggerPulse(float duration)
+{
+    m_pulseDuration = duration;
+    m_pulseTimer    = duration;
+}
+
+void Enemy::tickPulse(float deltaSeconds)
+{
+    if (m_pulseTimer > 0.0f) {
+        m_pulseTimer -= deltaSeconds;
+        if (m_pulseTimer < 0.0f)
+            m_pulseTimer = 0.0f;
+    }
 }
