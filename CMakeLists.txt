@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(RadarSimulation LANGUAGES CXX)
+project(RocketTrackingSystem LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -12,9 +12,9 @@ set(SFML_DIR "C:/SFML/SFML-3.1.0/lib/cmake/SFML" CACHE PATH "Path to SFMLConfig.
 find_package(SFML 3 COMPONENTS Graphics REQUIRED)
 
 add_executable(radar_sim
-    src/Enemy.cpp
-    src/RadarRenderer.cpp
-    src/Simulation.cpp
+    src/RocketTarget.cpp
+    src/TelemetryRenderer.cpp
+    src/RocketSimulation.cpp
     src/main.cpp
 )
 

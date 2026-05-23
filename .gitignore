@@ -2,12 +2,20 @@
 .godot/
 /android/
 
+# Visual Studio
+.vs/
+CMakeSettings.json
+
 # C++ / CMake build output
 /build/
 /out/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
+Makefile
 *.exe
 *.obj
 *.o
+*.dll
+*.pdb
+*.ilk
